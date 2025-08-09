@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tanto Digital</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="fondo">
-        <nav>
-            <ul>
-                <li><a href="#section1">Sección 1</a></li>
-                <li><a href="#section2">Sección 2</a></li>
-                <li><a href="#section3">Sección 3</a></li>
-            </ul>
+    <!-- Fondo animado fijo -->
+    <div id="fondo"></div>
+    
+    <!-- Contenido principal -->
+    <div class="content-wrapper">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="/Imagenes/TD_Marca_Iso cyan sin fondo.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Tanto Digital
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#diseno-de-marca">Diseño de Marca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#websites-y-apps">Websites y Apps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#redes-sociales">Redes Sociales</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-<main>
-            <section id="section1">
-                <h1>Bienvenido a Tanto Digital</h1>
-                <p>Explora nuestro contenido digital.</p>
+
+        <header>
+            <h1>Tanto Digital</h1>
+            <p>Tu fuente de contenido digital innovador</p>
+        </header>
+
+        <main>
+            <section class="secciones" id="diseno-de-marca">
+                <div class="secciones-content">
+                    <h1>Diseño de Marca</h1>
+                    <p>Creamos identidades visuales únicas que conectan con tu audiencia. Desde logotipos hasta sistemas completos de branding que reflejan la esencia de tu negocio.</p>
+                </div>
+                <div class="cuadro"></div>
             </section>
-            <section id="section2">
-                <h2>Sección 2</h2>
-                <p>Más información sobre nuestros servicios.</p>
+
+            <section class="secciones" id="websites-y-apps">
+                <div class="cuadro"></div>
+                <div class="secciones-content">
+                    <h2>Websites y Apps</h2>
+                    <p>Desarrollamos sitios web modernos y aplicaciones móviles que combinan diseño atractivo con funcionalidad excepcional. Experiencias digitales que convierten visitantes en clientes.</p>
+                </div>
             </section>
-            <section id="section3">
-                <h2>Sección 3</h2>
-                <p>Contáctanos para más detalles.</p>
+
+            <section class="secciones" id="redes-sociales">
+                <div class="secciones-content">
+                    <h2>Redes Sociales</h2>
+                    <p>Estrategias de contenido digital que ampllifican tu presencia online. Creamos campañas visuales impactantes que generan engagement y construyen comunidades leales.</p>
+                </div>
+                <div class="cuadro"></div>
             </section>
-</main>
+        </main>
+
         <footer>
             <p>&copy; 2025 Tanto Digital. Todos los derechos reservados.</p>
         </footer>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
-<script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" 
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

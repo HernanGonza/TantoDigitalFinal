@@ -1,17 +1,189 @@
+/* Reset y configuración base */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
+/* Fondo animado fijo que cubre toda la pantalla */
 #fondo {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #000c33;
+}
+
+/* Contenedor principal con contenido scrolleable */
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+/* Navbar personalizado */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #000c33 !important;
+}
+
+.nav-link {
+    color: #000c33 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00d4ff !important;
+}
+
+/* Header principal */
+header {
+    text-align: center;
+    padding: 100px 20px 60px;
+    color: white;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Secciones mejoradas */
+.secciones {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secciones:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.secciones-content {
+    flex: 1;
+}
+
+.secciones h1,
+.secciones h2 {
+    color: #000c33;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.secciones h1 {
+    font-size: 2.2rem;
+}
+
+.secciones h2 {
+    font-size: 2rem;
+}
+
+.secciones p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Cuadros decorativos mejorados */
+.cuadro {
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(135deg, #00d4ff, #000c33);
+    border-radius: 20px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cuadro::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .secciones {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        margin: 20px;
+    }
+
+    .cuadro {
+        width: 150px;
+        height: 150px;
+    }
+
+    .secciones h1 {
+        font-size: 1.8rem;
+    }
+
+    .secciones h2 {
+        font-size: 1.6rem;
+    }
 }
